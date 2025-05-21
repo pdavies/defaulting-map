@@ -1,5 +1,7 @@
 # DefaultingMap
 
+[![CI](https://github.com/pdavies/defaulting-map/actions/workflows/ci.yml/badge.svg)](https://github.com/pdavies/defaulting-map/actions/workflows/ci.yml)
+
 A tiny dependency-free extension to the native `Map`, with defaults and updates perfect for reducing data into buckets.
 
 ## Installation
