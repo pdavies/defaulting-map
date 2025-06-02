@@ -27,29 +27,17 @@ Into this:
 map.update(key, (value) => value + 1);
 ```
 
-## Examples
+## Example
 
 ```typescript
-const wordCounts = new DefaultingMap(() => 0);
 const text = "foo bar foo baz";
+const wordCounts = new DefaultingMap(() => 0);
 
 for (const word of words.split(' ')) {
   wordCounts.update(word, (count) => count + 1);
 }
 
 console.log([...wordCounts.entries()]); // [ [ 'foo', 2 ], [ 'bar', 1 ], [ 'baz', 1 ] ]
-```
-
-```typescript
-const lists = new DefaultingMap(() => new Set<string>());
-
-const pageViews = [["user1", "home"], ["user2", "about"], ["user1", "contact"], ["user1", "home"]];
-
-for (const [user, page] of pageViews) {
-    u.update(user, (pages) => pages.add(page));
-}
-
-console.log(pageViews.get('user1')); // Set(2) { 'home', 'contact' }
 ```
 
 ## Getting unset values
